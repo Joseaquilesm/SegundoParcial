@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -34,25 +34,12 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:titleTextColor="#ffffff" />
 
-            <ImageButton
-                android:id="@+id/btnAddProduct"
-                style="@style/Widget.AppCompat.ImageButton"
-                android:layout_width="38dp"
-                android:layout_height="37dp"
-                android:layout_marginEnd="52dp"
-                android:backgroundTint="@color/design_default_color_primary"
-                android:src="@drawable/ic_action_name"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/toolbar"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.526"
-                tools:srcCompat="@drawable/ic_action_name" />
-
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/addProductTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/sqlite"
+                android:layout_marginStart="24dp"
+                android:text="Add Category"
                 android:textColor="#ffffff"
                 android:textSize="24sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -60,7 +47,7 @@
                 app:layout_constraintHorizontal_bias="0.069"
                 app:layout_constraintStart_toStartOf="@+id/toolbar"
                 app:layout_constraintTop_toTopOf="@+id/toolbar"
-                app:layout_constraintVertical_bias="0.567" />
+                app:layout_constraintVertical_bias="0.666" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -68,21 +55,28 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <LinearLayout
-        android:layout_width="300dp"
-        android:layout_height="538dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <EditText
+        android:id="@+id/editTextCategory"
+        android:layout_width="318dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="Enter Category"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.354"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
 
-        <ListView
-            android:id="@+id/listViewProductos"
-            style="@style/Widget.AppCompat.ListView.Menu"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1" />
-    </LinearLayout>
 
+    <Button
+        android:id="@+id/btnSaveCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="124dp"
+        android:text="SAVE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
 </androidx.constraintlayout.widget.ConstraintLayout>
